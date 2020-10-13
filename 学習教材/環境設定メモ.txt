@@ -1,0 +1,40 @@
+◆適当なディレクトリでプロジェクトを作る
+
+$ npx create-nuxt-app test
+
+対話式コマンドで色々聞かれるので適当に答える（ほんとはちゃんとしたほうがいい気がしますが、わからなかったので適当。。）
+create-nuxt-app v3.4.0
+ Generating Nuxt.js project in test
+? Project name: Test
+? Programming language: TypeScript
+? Package manager: Npm
+? UI framework: None
+? Nuxt.js modules: (Press <space> to select, <a> to toggle all, <i> to invert selection)
+? Linting tools: ESLint, Prettier
+? Testing framework: Jest
+? Rendering mode: Universal (SSR / SSG)
+? Deployment target: Server (Node.js hosting)
+? Development tools: (Press <space> to select, <a> to toggle all, <i> to invert selection)
+? Continuous integration: GitHub Actions (GitHub only)
+? What is your GitHub username? kyoko
+? Version control system: Git
+
+
+◆設定のjavascript librariesに、jestとprettierをダウンロードして追加する
+
+
+◆jestがうまく認識してくれなかったので、tsconfig.jsonに下記を追加する
+"types": [
+   "jest"
+]
+
+この辺を参考にした気がします
+https://www.366service.com/jp/qa/cb77d46fd71067b8eb3f58d4a7eb193c
+
+
+◆引き続きテストがエラーを吐いたので下記の直し方の項を実施
+https://qiita.com/ryo511/items/0408d3763af797a16a7a
+
+
+その他は作成しながら必要なタイミングでnpm installする
+
